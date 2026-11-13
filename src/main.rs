@@ -36,6 +36,7 @@ fn scene() -> impl SceneList {
         MeshMaterial3d<StandardMaterial>(asset_value(Color::WHITE))
         Transform {
             translation: Vec3::new(0.0, 1.0, 0.0),
+            rotation: Quat::from_rotation_x(90.0_f32.to_radians())
         }
     }
 }
