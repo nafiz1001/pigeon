@@ -12,11 +12,11 @@ fn main() {
 
 fn scene() -> impl SceneList {
     bsn_list! {
-        # Camera
+        #Camera
         Camera3d
         Transform::from_xyz(0., 7., 7.).looking_at(Vec3::new(0., 1., 0.), Vec3::Y)
         --
-        # Light
+        #Light
         PointLight {
             shadow_maps_enabled: true,
             intensity: 10_000_000.0,
@@ -27,11 +27,11 @@ fn scene() -> impl SceneList {
             translation: Vec3::new(8.0, 16.0, 8.0),
         }
         --
-        # Ground
+        #Ground
         Mesh3d({ asset_value(Plane3d::default().mesh().size(50.0, 50.0).subdivisions(10)) })
         MeshMaterial3d<StandardMaterial>(asset_value(Color::from(SILVER)))
         --
-        # Capsule
+        #Capsule
         Mesh3d({ asset_value(Capsule3d::default()) })
         MeshMaterial3d<StandardMaterial>(asset_value(Color::WHITE))
         Transform {
